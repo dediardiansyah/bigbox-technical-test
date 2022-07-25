@@ -107,7 +107,7 @@ class Game
     {
         echo "<span>{$title}:</span><br/>";
         foreach ($this->players as $player) {
-            echo "Pemain #{$player->getName()}: ";
+            echo "Pemain #{$player->getName()} ({$player->getPoint()}): ";
             $diceTopSide = '';
 
             foreach ($player->getDiceInCup() as $dice) {
@@ -125,7 +125,7 @@ class Game
     public function displayWinner($player)
     {
         echo "<h1>Pemenang</h1>\r\n";
-        echo "Pemain {$player->getName()}<br>\r\n";
+        echo "Pemain {$player->getName()} ({$player->getPoint()})<br>\r\n";
         return $this;
     }
 
